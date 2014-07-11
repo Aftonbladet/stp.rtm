@@ -106,14 +106,14 @@ class Module
                 'BambooDao' => function (ServiceManager $serviceManager) {
                         return new Model\Dao\BambooDao($serviceManager->get('BambooDaoConfig'));
                 },
+                'HttpStatusDao' => function () {
+                        return new Model\Dao\HttpStatusDao(null);
+								},
                 'AtgImporterDao' => function () {
                         return new Model\Dao\AtgImporterDao(null);
                 },
                 'AtgTimeMetricsDao' => function () {
                         return new Model\Dao\AtgTimeMetricsDao(null);
-                },
-                'HttpStatusDao' => function () {
-                        return new Model\Dao\HttpStatusDao(null);
                 },
             ),
         );
