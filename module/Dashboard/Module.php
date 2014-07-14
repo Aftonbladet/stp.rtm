@@ -115,6 +115,9 @@ class Module
                 'AtgTimeMetricsDao' => function () {
                         return new Model\Dao\AtgTimeMetricsDao(null);
                 },
+                'ImboDao' => function () {
+                        return new Model\Dao\ImboDao(null);
+                },
             ),
         );
     }
