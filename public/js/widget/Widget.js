@@ -89,10 +89,8 @@ Widget.prototype = {
 
         this.$widget.css('opacity', '1');
 
-        if (this.oldValueHash !== "/" + response.hash || this.oldValueHash === '') {
-            this.oldValueHash = "/" + response.hash;
-            this.handleResponse(response);
-        }
+        this.oldValueHash = "/" + response.hash;
+        this.handleResponse(response);
     },
 
     fetchDataOnError: function (jqXHR) {
