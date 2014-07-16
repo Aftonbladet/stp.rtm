@@ -118,6 +118,9 @@ class Module
                 'ImboDao' => function () {
                         return new Model\Dao\ImboDao(null);
                 },
+                'DevilsPingerDao' => function () {
+                        return new Model\Dao\DevilsPingerDao(null);
+                },
             ),
         );
     }
