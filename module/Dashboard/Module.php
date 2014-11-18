@@ -121,6 +121,9 @@ class Module
                 'DevilsPingerDao' => function () {
                         return new Model\Dao\DevilsPingerDao(null);
                 },
+                'JsonCounterDao' => function () {
+                        return new Model\Dao\JsonCounterDao(null);
+                },
             ),
         );
     }
