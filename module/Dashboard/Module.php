@@ -109,6 +109,9 @@ class Module
                 'HttpStatusDao' => function () {
                         return new Model\Dao\HttpStatusDao(null);
                 },
+                'NumberHttpDao' => function () {
+                        return new Model\Dao\NumberHttpDao(null);
+                },
                 'ImboDao' => function () {
                         return new Model\Dao\ImboDao(null);
                 },

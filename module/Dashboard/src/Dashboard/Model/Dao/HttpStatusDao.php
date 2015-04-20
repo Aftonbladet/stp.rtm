@@ -9,6 +9,7 @@ namespace Dashboard\Model\Dao;
 
 use Zend\Http\Response;
 use Zend\Http\Client;
+use Zend\Http\Client\Exception\RuntimeException;
 
 class HttpStatusDao extends AbstractDao {
 
@@ -26,7 +27,7 @@ class HttpStatusDao extends AbstractDao {
             $importJson = $this->request($params['url'], $params, 'plain');
             $status = $importJson->getStatusCode();
             return $status;
-        } catch(\Zend\Http\Client\Exception\RuntimeException $e) {
+        } catch(RuntimeException $e) {
             $status = $e->getCode();
 
             // When non HTTP status code throw original error once again.
